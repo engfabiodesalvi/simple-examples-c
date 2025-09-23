@@ -1,10 +1,13 @@
 # 📘 Simple Examples in C  
 
-Este repositório contém exemplos práticos em linguagem **C**, organizados em uma ordem linear de aprendizado. Cada exemplo introduz novos conceitos fundamentais da programação em C.
+Este repositório contém exemplos práticos em linguagem **C**, organizados em uma ordem de aprendizado no curso Superior de Tecnologia em Análise e Desenvolcimento de Sistemas.\
+Cada exemplo introduz novos conceitos fundamentais da programação em C.
 
 ---
 
 ## 🚀 Exemplos  
+
+### ℹ️ Exemplos referente ao Capitulo 1 - Fundamentos
 
 1. 🔤 [Exemplo 1 - Hello World](exemple1.c)  
 2. 🔢 [Exemplo 2 - Declaraçã, escopo e atribuição de variáveis](example2.c)  
