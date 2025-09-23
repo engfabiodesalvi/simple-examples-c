@@ -70,3 +70,7 @@ int main() {
     int grande = 300;
     char pequeno = (char) grande; // Pode gerar valor inválido
 }
+
+// run into prompt:
+// $ exemplo{number}.exe
+// $ echo %errorlevel%

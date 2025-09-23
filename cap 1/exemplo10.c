@@ -31,5 +31,5 @@ int main() {
 }
 
 // run into prompt:
-// $ exemplo7.exe
+// $ exemplo{number}.exe
 // $ echo %errorlevel%

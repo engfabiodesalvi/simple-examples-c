@@ -20,3 +20,7 @@ int main() {
 
     return 0;
 }
+
+// run into prompt:
+// $ exemplo{number}.exe
+// $ echo %errorlevel%
