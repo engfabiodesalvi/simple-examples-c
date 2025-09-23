@@ -5,6 +5,8 @@
 int main() {
     SetConsoleOutputCP( CP_UTF8 ); //  mostrar caracteres acentuados
 
+    // Conversr de temperatura
+
     float temperatura, convertida;
     char escala;
 

@@ -6,7 +6,7 @@ int main() {
 
     if (local > 0) {
         int bloco = 25; // Escopo de bloco
-        // Aqui: global, lcal e bloc são visíveis
+        // Aqui: global, local e bloco são visíveis
     }
 
     // Aqui: 'bloco' Não é visivel

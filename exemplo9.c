@@ -5,6 +5,8 @@
 int main() {
     SetConsoleOutputCP( CP_UTF8 ); //  mostrar caracteres acentuados
 
+    // Calculadora simples
+    
     float num1, num2, resultado;
     char operador;
 
