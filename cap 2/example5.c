@@ -4,33 +4,44 @@
 
 int main() {
     SetConsoleOutputCP( CP_UTF8 ); //  mostrar caracteres acentuados
-
-    // Condicionais Compostas    
     
-    int idade = 0, renda = 0;
-    int returnIdade = 0, returnRenda  = 0;
+    // Estrutura de Controle
+    // Estrutura Switch/Case
+    // Múltiplas Alternativas    
+    
+    // Menu de Opções
 
-    printf("\nDigite sua idade: ");
-    // digite sua idade
-    returnIdade = scanf("%d", &idade);
+    int opcao = 0;
+    int returnOpcao = 0;
 
-    printf("\nDigite sua renda: ");
-    // digite sua renda
-    returnRenda = scanf("%d", &renda);    
+    printf("\nMenu:\n\n");
+    printf("1 - Novo jogo\n");
+    printf("2 - Carregar jogo\n");
+    printf("3 - Sair\n");
 
-    // verifica se foi digitado um valor numérico para idade e para renda
-    if (returnIdade == 1 && returnRenda == 1) {
-        // Utiliza condicionais compostas para definir a melhor linha de crédito
-        // com base na idade e na renda do usuário        
-        if (idade >= 18 && renda >= 2000) {
-            printf("\nAprovado para o cartão de crédito premium!\n");                
-        } else if (idade >= 18 && renda >= 1000) {
-            printf("\nAprovado para o cartão de crédito básico!\n");
-        } else {
-            printf("\nNão aprovado para cartão de crédito!\n");
+    printf("\nEscolha uma opção: ");
+    // digite sua opçao
+    returnOpcao = scanf("%d", &opcao);
+    
+
+    // verifica se uma opcao foi digitada
+    if (returnOpcao == 1) {
+        switch(opcao) {
+            case 1:
+                printf("\nVocê escolheu iniciar um novo jogo.\n");
+                break;
+            case 2:
+                printf("\nVocê escolheu carregar um jogo salvo.\n");
+                break;
+            case 3:
+                printf("\nSaindo do jogo. Até logo!\n");
+                break;
+            default:
+                printf("\nOpção inválida!\n");
+                break;
         }
     } else {
-        printf("\nAcesso negado: valor(es) incorreto(s)!\n");
+        printf("\nValor inválido!\n");
         return 1;
     }
       
