@@ -10,7 +10,7 @@ int main() {
     // Automatizando Tarefas 
 
     // Laço Do-While
-    // Garantindo pelo Menos uma Execução
+    // Garantindo pelo Menos uma Execução    
     // Adivinhe o número secreto
 
     int numero = 0, tentativas = 0;
