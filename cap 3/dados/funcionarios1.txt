@@ -1,0 +1,3 @@
+Joao_Silva 30 3500.50
+Maria_Santos 25 4200.00
+Pedro_Costa 35 5500.75
