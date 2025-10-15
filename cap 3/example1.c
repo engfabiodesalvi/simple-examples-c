@@ -13,7 +13,8 @@ int main() {
     
     // habilita UTF-8 no terminal 
     // Utilizar esta função para o correto funcinamento da biblioteca wchar.h
-    setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");    
+    //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");    
+    printf("%s\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));
 
     // Declaração e inicialização de um array (vetor) unidimensional de inteiros
     int numeros[5] = {10, 20, 30, 40, 50};

@@ -13,11 +13,12 @@ int main() {
     
     // habilita UTF-8 no terminal 
     // Utilizar esta função para o correto funcinamento da biblioteca wchar.h
-    // Atenção! Utilize os caracteres de separação decimal referentes à região definida!
+    // Atenção! Utilize o caractere de separação decimal referente à região definida!
     // Brasil -> ','
     // Estados Undos -> '.'    
-    setlocale(LC_ALL, "en_US.UTF-8");    
-    //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");    
+    //setlocale(LC_ALL, "en_US.UTF-8");    
+    //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
+    printf("%s\n", setlocale(LC_ALL, "en_US.UTF-8"));      
 
     // Manipulação de arquivos
 
@@ -31,11 +32,12 @@ int main() {
         return 1;
     }
 
-    // Escrita dados no arquivo com formatação: nome idade salario
+    // Escrita de dados em arquivo com a formatação: nome idade salario
     // Separação decimal "."
-    fprintf(arquivo, "Joao_Silva 30 3500.50\n");
+    fprintf(arquivo, "João_Silva 30 3500.50\n");
     fprintf(arquivo, "Maria_Santos 25 4200.00\n");
     fprintf(arquivo, "Pedro_Costa 35 5500.75\n");
+    fprintf(arquivo, "Florença_Conceição 51 2356.25\n");
     
     // Fechar arquivo após o uso
     fclose(arquivo);
