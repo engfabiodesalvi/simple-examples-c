@@ -44,11 +44,11 @@ int main() {
     // Chamando a função que retorna a média
     media = calcular_media(80, 90, 70);
 
-    // Chamando a função que retorna a média de um array
-    media_array = calcular_media_array(numeros, sizeof(numeros) / sizeof(numeros[0]));
-
     // Chamando a função void (sem retorno)
     exibir_resultado(media);
+
+    // Chamando a função que retorna a média de um array
+    media_array = calcular_media_array(numeros, sizeof(numeros) / sizeof(numeros[0]));
 
     // Chamando a função void (sem retorno)
     exibir_resultado(media_array);    
@@ -67,16 +67,17 @@ int calcular_fatorial(int n) {
 
 // Função para calcular a média de 3 números
 float calcular_media(int n1, int n2, int n3) {
-    prinf("1 %d\n2 %d\n3 %d\n", n1, n2, n3);
+    printf("\nNotas:\n1 %d\n2 %d\n3 %d\n", n1, n2, n3);
     return (n1 + n2 + n3) / 3.0;
 }
 
 // Função para calcular a média do array números
 float calcular_media_array(int numeros[], int tamanho_numeros) {
     int soma = 0;
+    printf("\nNotas:\n");
     for (int i = 0; i < tamanho_numeros; i++) {
         soma += numeros[i];
-        printf("%d - %d\n", i, numeros[i]);
+        printf("%d - %d\n", i + 1, numeros[i]);
     }
     return (float) soma / tamanho_numeros;
 }

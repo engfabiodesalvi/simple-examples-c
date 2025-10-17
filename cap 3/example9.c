@@ -17,7 +17,7 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
-    // Passagem de Parâmetros pr Valor
+    // Passagem de Parâmetros por Valor
 
     return 0;
 }
