@@ -4,7 +4,7 @@
 #include <Windows.h> // SetConsoleOutputCP()
 #include <locale.h> // setlocale()
 
-// Protótipo das funções
+// Protótipos das funções
 int calcular_fatorial(int n);
 float calcular_media(int n1, int n2, int n3);
 float calcular_media_array(int numeros[], int tamanho_numeros);

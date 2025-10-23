@@ -4,7 +4,8 @@
 #include <Windows.h> // SetConsoleOutputCP()
 #include <locale.h> // setlocale()
 
-// Protótipo(s) da(s) função(ões)
+// Protótipo da função
+void alterar_array(int vet[], int tamanho);
 
 int main() {
     //  mostrar caracteres acentuados
@@ -19,9 +20,19 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Passagem por referência
+    
+    int numeros[3] = {1, 2, 3};
+    printf("Antes: %d\n", numeros[0]);
+    alterar_array(numeros, 3);
+    printf("Depois: %d\n", numeros[0]);
+
     return 0;
 }
 
+void alterar_array(int vet[], int tamanho) {
+    vet[0] = 999;
+}
 // run into prompt:
 // $ prompt $G
 // $ exemplo{number}.exe

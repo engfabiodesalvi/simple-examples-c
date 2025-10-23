@@ -5,7 +5,7 @@
 #include <locale.h> // setlocale()
 
 // Protótipo da função
-void alterar_valor(int x);
+int dividir_seguro(float a, float b, float *resultado);
 
 int main() {
     //  mostrar caracteres acentuados
@@ -20,19 +20,36 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
-    // Passagem de Parâmetros por Valor
-    int numero = 50;
-    printf("Antes da função: %d\n", numero);
-    alterar_valor(numero);
-    printf("Depois da função: %d\n", numero);
+    // Retorno de valores em funções
+    // Exemplo 2 - Retornando Status (Sucesso/Erro)
+    
+    float resultado;
+
+    if (dividir_seguro(10.0, 2.0, &resultado)) {
+        printf("Resultado da divisão: %.2f\n", resultado);
+    } else {
+        printf("Erro: Divisão por zero!\n");
+    }
+ 
+    if (dividir_seguro(10.0, 0.0, &resultado)) {
+        printf("Resultado da divisão: %.2f\n", resultado);
+    } else {
+        printf("Erro: Divisão por zero!\n");
+    }
 
     return 0;
 }
 
-void alterar_valor(int x) {
-    x = 100;
-    printf("Dentro da função: %d\n", x);
+// Função que tenta dividir e retornar status
+int dividir_seguro(float a, float b, float *resultado) {
+    if (b == 0) {
+        return 0; // Erro: divisão por zero
+    }
+
+    *resultado = a / b;
+    return 1; // Sucesso
 }
+
 // run into prompt:
 // $ prompt $G
 // $ exemplo{number}.exe

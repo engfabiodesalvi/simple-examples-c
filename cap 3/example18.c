@@ -19,6 +19,22 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Trabalhando com Ponteiros
+
+    // Declarando as variáveis
+    int valor = 42;
+    int *ponteiro = &valor;
+
+    // Imprimindo dados das variáveis
+    printf("Valor da variável: %d\n", valor);
+    printf("Endereço da variável: %p\n", &valor);
+    printf("Valor do ponteiro: %p\n", ponteiro);
+    printf("Valor apontado pelo ponteiro: %d\n", *ponteiro);
+
+    // Modificação através do ponteiro
+    *ponteiro = 100;
+    printf("Novo valor da variável: %d\n", valor);
+
     return 0;
 }
 

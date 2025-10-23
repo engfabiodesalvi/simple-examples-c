@@ -4,7 +4,8 @@
 #include <Windows.h> // SetConsoleOutputCP()
 #include <locale.h> // setlocale()
 
-// Protótipo(s) da(s) função(ões)
+// Protótipo da função
+void operacoes(int a, int b, int *soma, int *produto, int *diferenca);
 
 int main() {
     //  mostrar caracteres acentuados
@@ -19,7 +20,26 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Retorno de valores em funções
+    // Exemplo 3 - Retornando Múltiplos Valores com Ponteiros
+
+    int x = 10, y = 4;
+    int soma, produto, diferenca;
+
+    operacoes(x, y, &soma, &produto, &diferenca);
+
+    printf("Soma: %d\n", soma);
+    printf("Produto: %d\n", produto);
+    printf("Diferenca: %d\n", diferenca);
+
     return 0;
+}
+
+// Calcula várias operações e retorna os valores pelos ponteiros
+void operacoes(int a, int b, int *soma, int *produto, int *diferenca) {
+    *soma = a + b;
+    *produto = a * b;
+    *diferenca = a - b;
 }
 
 // run into prompt:

@@ -4,7 +4,15 @@
 #include <Windows.h> // SetConsoleOutputCP()
 #include <locale.h> // setlocale()
 
+// Declarando a struct
+struct Resultado {
+    int soma;
+    int produto;
+    int diferenca;
+};
+
 // Protótipo(s) da(s) função(ões)
+struct Resultado calcular(int a, int b);
 
 int main() {
     //  mostrar caracteres acentuados
@@ -19,7 +27,27 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Retorno de valores em funções
+    // Exemplo 4 - Retornando uma Struct (Vários Dados Organizados)
+
+    // Declarando a variável struct
+    struct Resultado r = calcular(10, 5);
+
+    // Imprimindo o resultado
+    printf("Soma: %d\n", r.soma);
+    printf("Produto: %d\n", r.produto);
+    printf("Diferença: %d\n", r.diferenca);
+
     return 0;
+}
+
+// A função retorna uma struct
+struct Resultado calcular(int a, int b) {
+    struct Resultado r;
+    r.soma = a + b;
+    r.produto = a * b;
+    r.diferenca = a - b;
+    return r;
 }
 
 // run into prompt:

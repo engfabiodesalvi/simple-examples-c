@@ -4,7 +4,8 @@
 #include <Windows.h> // SetConsoleOutputCP()
 #include <locale.h> // setlocale()
 
-// Protótipo(s) da(s) função(ões)
+// Protótipo da função
+int encontrar_maior(int a, int b, int c);
 
 int main() {
     //  mostrar caracteres acentuados
@@ -19,7 +20,25 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Retorno de valores em funções
+    // Exemplo 1 - Retornando um valor simples
+    int x = 15, y = 23, z = 19;
+
+    int resultado = encontrar_maior(x, y, z);
+
+    printf("Maior valor: %d\n", resultado);
+
     return 0;
+}
+
+// Retorna o maior valor entre três inteiros
+int encontrar_maior(int a, int b, int c) {
+    int maior = a;
+
+    if (b > maior) maior = b;
+    if (c > maior) maior = c;
+
+    return maior;
 }
 
 // run into prompt:
