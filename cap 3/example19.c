@@ -6,6 +6,7 @@
 
 // Protótipo(s) da(s) função(ões)
 
+
 int main() {
     //  mostrar caracteres acentuados
     // SetConsoleOutputCP( CP_UTF8 ); 
@@ -19,8 +20,16 @@ int main() {
     //setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");  
     printf("%s\n\n", setlocale(LC_ALL, "Portuguese_Brazil.UTF-8"));     
 
+    // Trabalhando com ponteiros
+
+    // Passagem por referência
+
+
     return 0;
 }
+
+// Função que troca valores usando ponteiros
+void trocar_valores(int)
 
 // run into prompt:
 // $ prompt $G
